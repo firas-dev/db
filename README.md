@@ -15,7 +15,7 @@ GROUP BY d.department_name;
 --6 
 select job_id,count (employee_id) from hr.employees group by job_id ;
 --7 
-select count(department_id) as nombre_total_departments from hr.employees
-where department_id IS NOT NULL;
+select count(department_id) as nombre_total_departments from hr.employees;
+select count (nvl(department_id,0)) as nombre_total_departments from hr.employees;
 --8
 
